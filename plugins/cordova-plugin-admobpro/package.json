@@ -10,7 +10,7 @@
         "spec": "latest",
         "type": "tag"
       },
-      "E:\\project\\api\\GitHub\\goodprice"
+      "E:\\project\\api\\GitHub\\fishshrimpcrab"
     ]
   ],
   "_from": "cordova-plugin-admobpro@latest",
@@ -45,7 +45,7 @@
   "_shasum": "b0bdc704d68d4db803418b1a0b29cafc94445822",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-admobpro",
-  "_where": "E:\\project\\api\\GitHub\\goodprice",
+  "_where": "E:\\project\\api\\GitHub\\fishshrimpcrab",
   "author": {
     "name": "Liming Xie"
   },

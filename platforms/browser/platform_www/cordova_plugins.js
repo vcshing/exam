@@ -9,6 +9,28 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
+        "id": "cordova-plugin-admobpro.AdMob",
+        "pluginId": "cordova-plugin-admobpro",
+        "clobbers": [
+            "window.AdMob"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device/www/device.js",
+        "id": "cordova-plugin-device.device",
+        "pluginId": "cordova-plugin-device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+        "id": "cordova-plugin-device.DeviceProxy",
+        "pluginId": "cordova-plugin-device",
+        "runs": true
+    },
+    {
         "file": "plugins/cordova-plugin-dialogs/www/notification.js",
         "id": "cordova-plugin-dialogs.notification",
         "pluginId": "cordova-plugin-dialogs",
@@ -130,32 +152,26 @@ module.exports = [
         "id": "phonegap-plugin-barcodescanner.BarcodeScannerProxy",
         "pluginId": "phonegap-plugin-barcodescanner",
         "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
-        "id": "cordova-plugin-admobpro.AdMob",
-        "pluginId": "cordova-plugin-admobpro",
-        "clobbers": [
-            "window.AdMob"
-        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "com.verso.cordova.clipboard": "0.1.0",
+    "cordova-plugin-extension": "1.5.3",
+    "cordova-plugin-admobpro": "2.29.29",
     "cordova-plugin-console": "1.1.0",
+    "cordova-plugin-device": "1.1.7",
     "cordova-plugin-dialogs": "1.3.0",
     "cordova-plugin-inappbrowser": "1.5.0",
+    "cordova-plugin-inapppurchase": "1.1.0",
     "cordova-plugin-network-information": "1.3.2",
     "cordova-plugin-statusbar": "2.4.0",
     "cordova-plugin-vibration": "2.1.2",
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-x-socialsharing": "5.1.6",
     "cordova-plugin-x-toast": "2.5.2",
-    "phonegap-plugin-barcodescanner": "6.0.5",
-    "cordova-plugin-extension": "1.5.3",
-    "cordova-plugin-admobpro": "2.29.29"
+    "phonegap-plugin-barcodescanner": "6.0.5"
 }
 // BOTTOM OF METADATA
 });

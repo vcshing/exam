@@ -10,7 +10,7 @@
         "spec": "latest",
         "type": "tag"
       },
-      "E:\\project\\api\\GitHub\\goodprice"
+      "E:\\project\\api\\GitHub\\fishshrimpcrab"
     ]
   ],
   "_from": "cordova-plugin-extension@latest",
@@ -45,7 +45,7 @@
   "_shasum": "7e9a966e26af2f6416ee8b98672e63fe4f23c06c",
   "_shrinkwrap": null,
   "_spec": "cordova-plugin-extension",
-  "_where": "E:\\project\\api\\GitHub\\goodprice",
+  "_where": "E:\\project\\api\\GitHub\\fishshrimpcrab",
   "author": {
     "name": "Liming Xie",
     "email": "rjfun.mobile@gmail.com"
