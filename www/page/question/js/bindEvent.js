@@ -1,4 +1,4 @@
-myApp.onPageInit('question', function(page) {
+app.onPageInit('question', function(page) {
 
 
 })

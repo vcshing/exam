@@ -21,5 +21,5 @@ function renderTopicList(array){
 }
 
 function redirectQuestionPage(index){
-  mainView.router.loadPage("page/question/question.html?id=" + index)
+    app.view.current.router.navigate("/question/?id="+ index)
 }

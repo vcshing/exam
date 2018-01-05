@@ -1,196 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
-
-  <!-- Required meta tags-->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-tap-highlight" content="no">
-
-  <!-- Your app title -->
-  <title>Luck</title>
-
-  <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
-        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
-     -->
-
-  <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
-  <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-  <link rel="stylesheet" href="lib/framework7/css/framework7-icons.css">
-  <link rel="stylesheet" href="lib/framework7/css/framework7.material.css">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Framework7</title>
+  <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+  <link rel="stylesheet" href="lib/framework7/css/app.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/csshake.min.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+</head>
 
-  <script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
+<body>
+  <div id="app">
+    <div class="statusbar"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="page">
+        <div class="page-content">
+          <!--  <div class="block-title">Left Panel</div>
+          <div class="block">  </div>
+          <div class="block-title">Main View Navigation</div>-->
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/" class="panel-close">主頁</a>
+              </li>
+              <li>
+                <a href="/action-sheet/" class="panel-close">其他應用</a>
+              </li>
+              <li>
+                <a href="/badge/" class="panel-close">分享應用</a>
+              </li>
+
+            </ul>
+          </div>
+          <!--  <div class="block">  </div>-->
+        </div>
+      </div>
+    </div>
+    <!--  <div class="panel panel-right panel-reveal">
+      <div class="view view-init view-right" name="right" data-url="/">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+            </div>
+            <div class="block-title">Panel Navigation</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                <li><a href="/panel-right-2/">Right panel page 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <div class="view view-main view-init ios-edges" data-url="/">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding">Framework7</div>
+            <div class="right">
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons ios-only">search_strong</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+            </div>
+            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+              <div class="searchbar-inner">
+                <div class="searchbar-input-wrap">
+                  <input type="search" placeholder="Search components" />
+                  <i class="searchbar-icon"></i>
+                  <span class="input-clear-button"></span>
+                </div>
+                <span class="searchbar-disable-button">Cancel</span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="page-content">
+
+          <div class="list simple-list searchbar-not-found">
+            <ul>
+              <li>Nothing found</li>
+            </ul>
+          </div>
+          <div class="list">
+            <ul>
+              <li>
+                <a class="item-link smart-select smart-select-init picker-type" data-open-in="popover">
+                  <div><select name="type" multiple>
+                  </select>
+                </div>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Type</div>
+
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="list sortable topicList">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="commonjs/library/jquery.js"></script>
   <!--  <script type="text/javascript" src="commonjs/library/jquery-ui.js"></script>
   <script type="text/javascript" src="js/moment.js"></script>-->
   <script type="text/javascript" src="commonjs/library/local_storage_manager.js"></script>
-  <script language="javascript" src="commonjs/library/GB2312TOBIG5.js"></script>
-  <script language="javascript" src="commonjs/library/GBCodeUnicode.js"></script>
-  <script language="javascript" src="commonjs/library/GB2312TOBIGGB.js"></script>
-  <script language="javascript" src="commonjs/library/BIG5TOGB2312.js"></script>
-  <script language="javascript" src="commonjs/library/BIGCodeUnicode.js"></script>
-  <script language="javascript" src="commonjs/library/BIG5TOGBBIG.js"></script>
-  <style></style>
-</head>
+  <script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
+  <script type="text/javascript" src="commonjs/global/langArr.js"></script>
+  <script type="text/javascript" src="commonjs/routes/routes.js"></script>
+  <script type="text/javascript" src="commonjs/routes/app.js"></script>
 
-<body>
-  <!-- Status bar overlay for full screen mode (PhoneGap) -->
-  <div class="statusbar-overlay"></div>
+  <script type="text/javascript" src="commonjs/global/projectCommonFunction.js"></script>
+  <script type="text/javascript" src="commonjs/global/projectCommonBindEvent.js"></script>
+  <script type="text/javascript" src="commonjs/global/commonFunction.js"></script>
+  <script type="text/javascript" src="commonjs/global/commonBindEvent.js"></script>
+  <script type="text/javascript" src="commonjs/global/commonXhr.js"></script>
 
-  <!-- Panels overlay-->
-  <div class="panel-overlay"></div>
-  <!-- Left panel with reveal effect-->
-  <div class="panel panel-left panel-reveal">
-    <div class="button indexpage">主頁</div>
-    <div class="button ranking">排行榜</div>
-    <div class="button dailyCheckin">每日簽到</div>
-    <div class="button rechargeMoney">充值</div>
-
-    <div class=" button ">
-      &nbsp;
-    </div>
-    <div class=" button ">
-      &nbsp;
-    </div>
-    <div class=" button ">
-      &nbsp;
-    </div>
-    <div class="button otherApp wordOtherApps">
-      其他應用
-    </div>
-    <div class="button shareApp">
-      分享應用
-    </div>
-    <div class=" button ">
-      &nbsp;
-    </div>
-    <div class="menuBack button ">
-      ~ 返回 ~
-    </div>
-    <div class=" button ">
-      &nbsp;
-    </div>
-    <div class=" button ">
-      &nbsp;
-    </div>
-  </div>
-
-  <!-- Views -->
-  <div class="views">
-    <!-- Your main view, should have "view-main" class -->
-    <div class="view view-main">
-      <!-- Top Navbar-->
-      <div class="navbar">
-        <div class="navbar-inner">
-
-          <div class="subnavbar">
-            <!-- Sub navbar content, for example tabs buttons -->
-            <div class="buttons-row">
-              <a href="#tab1" class="button active">Tab 1</a>
-              <a href="#tab2" class="button">Tab 2</a>
-              <a href="#tab3" class="button">Tab 3</a>
-            </div>
-          </div>
-
-          <div class="left">
-            <i class="icon icon-bars navMenu"></i>
-            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-          </div>
-          <div class="right">
-            <div class="button"></div>
-
-            <p class="buttons-row">
-
-
-              <!--
-                          Right link contains only icon - additional "icon-only" class
-                          Additional "open-panel" class tells app to open panel when we click on this link
-                        -->
+  <script type="text/javascript" src="page/index/init.js"></script>
+  <script type="text/javascript" src="page/index/function.js"></script>
+  <script type="text/javascript" src="page/index/bindEvent.js"></script>
+  <script type="text/javascript" src="page/index/xhr.js"></script>
 
 
 
-            </p>
-          </div>
-        </div>
-      </div>
-      <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-      <div class="pages navbar-through toolbar-through">
-        <!-- Page, "data-page" contains page name -->
-        <div data-page="index" class="page">
-          <!-- Scrollable page content -->
-
-          <div class="page-content">
-
-            <div class="list-block">
-              <ul>
-                <li>
-                  <div class="item-content">
-                    <div class="item-inner">
-                      <div class="item-input">
-                        <input type="text" placeholder="ALL" readonly id="picker-device">
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="list-block media-list topicList">
-
-            </div>
-
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-      <script type="text/javascript" src="cordova.js"></script>
-
-      <script type="text/javascript" src="commonjs/global/langArr.js"></script>
-      <script type="text/javascript" src="commonjs/global/projectCommonFunction.js"></script>
-      <script type="text/javascript" src="commonjs/global/projectCommonBindEvent.js"></script>
-      <script type="text/javascript" src="commonjs/global/commonFunction.js"></script>
-      <script type="text/javascript" src="commonjs/global/commonBindEvent.js"></script>
-      <script type="text/javascript" src="commonjs/global/commonXhr.js"></script>
-      <script type="text/javascript" src="commonjs/global/my-app.js"></script>
-
-      <script type="text/javascript" src="page/index/init.js"></script>
-      <script type="text/javascript" src="page/index/function.js"></script>
-      <script type="text/javascript" src="page/index/bindEvent.js"></script>
-      <script type="text/javascript" src="page/index/xhr.js"></script>
-
-      <script type="text/javascript" src="page/question/js/init.js"></script>
-      <script type="text/javascript" src="page/question/js/function.js"></script>
-      <script type="text/javascript" src="page/question/js/bindEvent.js"></script>
-      <script type="text/javascript" src="page/question/js/xhr.js"></script>
-
-
-      <script>
-        $(function() {
-
-          init();
-
-        })
-      </script>
-
+  <script>
+  $(function(){
+    init()
+  })
+  </script>
 </body>
 
 </html>

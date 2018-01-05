@@ -1,3 +1,4 @@
+
 $(".otherApp").bind("click", function(e) {
     e.preventDefault();
     var target = "_system";

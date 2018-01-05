@@ -1,4 +1,4 @@
-myApp.onPageInit('ranking', function(page) {
+app.onPageInit('ranking', function(page) {
     showloading();
     updateRecord(onhandAmt,function() {
 
