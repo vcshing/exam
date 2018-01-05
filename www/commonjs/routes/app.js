@@ -17,12 +17,14 @@ var app = new Framework7({
     xhrCache: false,
   },
   data: function () {
+    var ios = true;
     return {
-      user: {
-        firstName: 'John',
-        lastName: 'Doe',
-      },
-    };
+      commentsIcon: ios ? '<i class="icon f7-icons">chat_fill</i>' : '<i class="icon material-icons">message</i>',
+      sortIcon: ios ? '<i class="icon f7-icons">sort</i>' : '<i class="icon material-icons">sort</i>',
+      moreIcon: ios ? '<i class="icon f7-icons">more_vertical_round</i>' : '<i class="icon material-icons">more_vert</i>',
+      trashIcon: ios ? '<i class="icon f7-icons">trash</i>' : '<i class="icon material-icons">delete</i>',
+      composeIcon: ios ? '<i class="icon f7-icons">compose</i>' : '<i class="icon material-icons">edit</i>'
+    }
   },
   methods: {
     helloWorld: function () {
@@ -33,6 +35,16 @@ var app = new Framework7({
   vi: {
     placementId: 'pltd4o7ibb9rc653x14',
   },
+  on: {
+  // each object key means same name event handler
+  pageInit: function (page) {
+    // do something on page init
+    //alert(1);
+  },
+  popupOpen: function (popup) {
+    // do something on popup open
+  },
+},
 });
 
 

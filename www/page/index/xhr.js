@@ -31,7 +31,7 @@ function ajaxGetTopicList(callback) {
         callback = function() {};
     }
     callback({
-      "result":[{"id":1,"topic":"你的情人是誰?"},{"id":2,"topic": "你是富翁嗎?"}]
+      "result":[{"id":1,"topic":"How are you ?"},{"id":2,"topic": "what is your name?"}]
     })
     return
     $.ajax({
