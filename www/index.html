@@ -32,6 +32,9 @@
                 <a href="/" class="panel-close">主頁</a>
               </li>
               <li>
+                <a href="/user-submit-exam/" class="panel-close">提交心理測驗題目</a>
+              </li>
+              <li>
                 <a href="/action-sheet/" class="panel-close">其他應用</a>
               </li>
               <li>
@@ -96,7 +99,7 @@
             </form>
           </div>
         </div>
-        <div class="page-content">
+        <div class="page-content infinite-scroll-content">
 
           <div class="list simple-list searchbar-not-found">
             <ul>
@@ -107,13 +110,14 @@
             <ul>
               <li>
                 <a class="item-link smart-select smart-select-init picker-type" data-open-in="popover">
-                  <div><select name="type" multiple>
-                  </select>
+                  <div>
+                    <select name="type" multiple class="type">
+                      <option value="">ALL<option>
+                    </select>
                 </div>
                   <div class="item-content">
                     <div class="item-inner">
-                      <div class="item-title">Type</div>
-
+                      <div class="item-title">種類</div>
                     </div>
                   </div>
                 </a>
@@ -121,8 +125,10 @@
 
             </ul>
           </div>
-          <div class="list sortable topicList">
-
+          <div class="list sortable ">
+            <ui class="topicList">
+            </ui>
+                <div class="preloader infinite-scroll-preloader"></div>
           </div>
         </div>
       </div>
@@ -136,21 +142,28 @@
   <script type="text/javascript" src="lib/framework7/js/framework7.js"></script>
   <script type="text/javascript" src="commonjs/global/langArr.js"></script>
   <script type="text/javascript" src="commonjs/routes/routes.js"></script>
-  <script type="text/javascript" src="commonjs/routes/app.js"></script>
 
   <script type="text/javascript" src="commonjs/global/projectCommonFunction.js"></script>
   <script type="text/javascript" src="commonjs/global/projectCommonBindEvent.js"></script>
   <script type="text/javascript" src="commonjs/global/commonFunction.js"></script>
   <script type="text/javascript" src="commonjs/global/commonBindEvent.js"></script>
   <script type="text/javascript" src="commonjs/global/commonXhr.js"></script>
+  <script type="text/javascript" src="commonjs/routes/app.js"></script>
 
   <script type="text/javascript" src="page/index/init.js"></script>
   <script type="text/javascript" src="page/index/function.js"></script>
   <script type="text/javascript" src="page/index/bindEvent.js"></script>
   <script type="text/javascript" src="page/index/xhr.js"></script>
 
+  <script type="text/javascript" src="page/user-submit-exam/js/init.js"></script>
+  <script type="text/javascript" src="page/user-submit-exam/js/function.js"></script>
+  <script type="text/javascript" src="page/user-submit-exam/js/bindEvent.js"></script>
+  <script type="text/javascript" src="page/user-submit-exam/js/xhr.js"></script>
 
-
+  <script type="text/javascript" src="page/question/js/init.js"></script>
+  <script type="text/javascript" src="page/question/js/function.js"></script>
+  <script type="text/javascript" src="page/question/js/bindEvent.js"></script>
+  <script type="text/javascript" src="page/question/js/xhr.js"></script>
   <script>
   $(function(){
     init()

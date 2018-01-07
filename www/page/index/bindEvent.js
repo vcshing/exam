@@ -3,3 +3,7 @@ function bindTopicList(){
     mainView.router.loadPage("page/question/question.html")
   })
 }
+
+$$('.infinite-scroll-content').on('infinite', function () {
+
+})

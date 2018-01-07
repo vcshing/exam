@@ -11,6 +11,12 @@ var routes = [
     componentUrl: './page/question/question.html',
     name: 'question',
   },
+  // user-submit-exam page
+  {
+    path: '/user-submit-exam/',
+    componentUrl: './page/user-submit-exam/user-submit-exam.html',
+    name: 'user-submit-exam',
+  },
   // Right Panel pages
   {
     path: '/panel-right-1/',

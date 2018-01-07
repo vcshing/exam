@@ -4,47 +4,45 @@ var $$ = Dom7;
 // Theme
 var theme = 'auto';
 if (document.location.search.indexOf('theme=') >= 0) {
-  theme = document.location.search.split('theme=')[1].split('&')[0];
+    theme = document.location.search.split('theme=')[1].split('&')[0];
 }
 
 // Init App
 var app = new Framework7({
-  id: 'io.framework7.testapp',
-  root: '#app',
-  theme: theme,
-  view: {
-    iosDynamicNavbar: false,
-    xhrCache: false,
-  },
-  data: function () {
-    var ios = true;
-    return {
-      commentsIcon: ios ? '<i class="icon f7-icons">chat_fill</i>' : '<i class="icon material-icons">message</i>',
-      sortIcon: ios ? '<i class="icon f7-icons">sort</i>' : '<i class="icon material-icons">sort</i>',
-      moreIcon: ios ? '<i class="icon f7-icons">more_vertical_round</i>' : '<i class="icon material-icons">more_vert</i>',
-      trashIcon: ios ? '<i class="icon f7-icons">trash</i>' : '<i class="icon material-icons">delete</i>',
-      composeIcon: ios ? '<i class="icon f7-icons">compose</i>' : '<i class="icon material-icons">edit</i>'
-    }
-  },
-  methods: {
-    helloWorld: function () {
-      app.dialog.alert('Hello World!');
+    id: 'io.framework7.testapp',
+    root: '#app',
+    theme: theme,
+    view: {
+        iosDynamicNavbar: false,
+        xhrCache: false,
     },
-  },
-  routes: routes,
-  vi: {
-    placementId: 'pltd4o7ibb9rc653x14',
-  },
-  on: {
-  // each object key means same name event handler
-  pageInit: function (page) {
-    // do something on page init
-    //alert(1);
-  },
-  popupOpen: function (popup) {
-    // do something on popup open
-  },
-},
+    data: function() {
+        return {
+          "types" : ['iPhone 4', 'iPhone 4S']
+        }
+    },
+    methods: {
+        helloWorld: function() {
+            app.dialog.alert('Hello World!');
+        },
+    },
+    routes: routes,
+    vi: {
+        placementId: 'pltd4o7ibb9rc653x14',
+    },
+    on: {
+        // each object key means same name event handler
+        pageInit: function(page) {
+            // do something on page init
+            if(page.route.name == "home"){
+              lang = getCookie("lang", "selectedLang", "zh-TW");
+            }
+
+        },
+        popupOpen: function(popup) {
+            // do something on popup open
+        },
+    },
 });
 
 

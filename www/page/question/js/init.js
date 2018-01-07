@@ -1,7 +1,10 @@
-app.onPageInit('question', function(page) {
+function userReadExamPageInit(page) {
 
-  ajaxGetQuestionDetail([{"id":page.query.id}],function(response){
-    $(".questionTopic").html(response.topic);
-    //alert(JSON.stringify(response))
-  })
-})
+    ajaxGetQuestionDetail({
+        "id": page.detail.route.query.id
+    }, function(response) {
+      //debugger;
+        $(".questionTopic").html(response.topic);
+        //alert(JSON.stringify(response))
+    })
+}

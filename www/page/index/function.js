@@ -1,11 +1,11 @@
 function renderTopicList(array){
   var html="";
-  html += "      <ul>";
+//  html += "      <ul>";
   html += "                <li>";
-  html += "                   <a class=\"item-link item-content\" onclick=\"redirectQuestionPage("+ array.id +")\">";
+  html += "                   <a class=\"item-link item-content\" onclick=\"redirectQuestionPage("+ array.master_id +")\">";
   html += "                    <div class=\"item-inner\">";
   html += "                      <div class=\"item-title-row\">";
-  html += "                        <div class=\"item\">"+array.topic+"<\/div>";
+  html += "                        <div class=\"item\">"+array.title+"<\/div>";
   //html += "                        <!--  <div class=\"item-after\">$15<\/div>-->";
   html += "                      <\/div>";
   html += "";
@@ -14,7 +14,7 @@ function renderTopicList(array){
   html += "                  <\/a>";
   html += "                <\/li>";
   html += "";
-  html += "              <\/ul>";
+//  html += "              <\/ul>";
 
 
   return html;

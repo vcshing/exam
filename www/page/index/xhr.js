@@ -1,54 +1,47 @@
 function ajaxGetExamType(callback) {
     if (typeof(callback) != "function") {
-        callback = function() {};
+        callback = function(response) {
+        //  debugger;
+        };
     }
-    callback({
-      "result":['ALL','iPhone 4', 'iPhone 4S']
-    })
-    return
+
     $.ajax({
         type: "post",
-        url: "http://gogogo.synology.me/api/fishshrimpcrab/addrecord.php",
+        url: "http://gogogo.synology.me/api/psychologicaltest/gettype.php",
         data: {
-            "deviceid": getDeviceID(),
-            "name": getDeviceID(),
-            "mark": mark,
             "lang": lang
         },
         dataType: "json",
         success: function(response) {
-          callback();
+          callback(response);
+          //callback(response);
         },
         error: function(response) {
-          callback();
+          callback(response);
         }
     });
 }
 
 
-function ajaxGetTopicList(callback) {
+function ajaxGetTopicList(array,callback) {
     if (typeof(callback) != "function") {
         callback = function() {};
     }
-    callback({
-      "result":[{"id":1,"topic":"How are you ?"},{"id":2,"topic": "what is your name?"}]
-    })
-    return
+
     $.ajax({
         type: "post",
-        url: "http://gogogo.synology.me/api/fishshrimpcrab/addrecord.php",
+        url: "http://gogogo.synology.me/api/psychologicaltest/getdata.php",
         data: {
-            "deviceid": getDeviceID(),
-            "name": getDeviceID(),
-            "mark": mark,
-            "lang": lang
+            "page": array.page,
+            "type": array.type,
+            "id": array.id
         },
         dataType: "json",
         success: function(response) {
-          callback();
+          callback(response);
         },
         error: function(response) {
-          callback();
+          callback(response);
         }
     });
 }

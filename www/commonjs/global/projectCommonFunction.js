@@ -68,9 +68,9 @@ function checkLang() {
             if (typeof(navigator.language.split('-')[1]) != "undefined") {
                 if (navigator.language.split('-')[1].toLowerCase() == "tw" ||
                     navigator.language.split('-')[1].toLowerCase() == "hk") {
-                    var lang = "zh-tw"
+                    var lang = "zh-TW"
                 } else {
-                    var lang = "zh-cn"
+                    var lang = "zh-CN"
                 }
             }
         } else {
@@ -84,7 +84,7 @@ function checkLang() {
 }
 
 function setLang() {
-    if (checkLang() == "zh-tw") {
+    if (checkLang() == "zh-TW") {
         $(".langtc").hide();
     }
 
@@ -96,7 +96,7 @@ function setLang() {
         $(".langDefault").addClass("button-fill");
         $(".langtc").removeClass("button-fill");
         $(".langen").removeClass("button-fill");
-    } else if (lang == "zh-tw") {
+    } else if (lang == "zh-TW") {
         $(".langtc").addClass("button-fill");
         $(".langen").removeClass("button-fill");
         $(".langDefault").removeClass("button-fill");
@@ -372,4 +372,14 @@ function googleInAppBuyProduct(callback) {
       myApp.alert("Error" + JSON.stringify(e))
     }
 
+}
+
+function digital2Alphabet(digital, toUpperCase){
+  var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+  if(toUpperCase == false){
+    var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    return alphabet[digital]
+  }else{
+    return alphabet[digital].toUpperCase();
+  }
 }
