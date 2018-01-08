@@ -8,30 +8,45 @@
             <span class="ios-only">Back</span>
           </a>
         </div>
-        <div class="title"></div>
+        <div class="title questionTitle"></div>
       </div>
     </div>
     <div class="page-content">
-        <div class="questionTopic">12313</div >
+      <div class="block block-strong question">
+  </div>
+<div class="block">
+<div class="content-block-inner">
+  <div class="list media-list">
+    <ul class = "questionAns">
+
+    </ul>
+  </div>
+</div>
+</div>
+<div class="block">
+  <div class="row">
+    <button class="col button button-outline ansConfirm">確定</button>
+  </div>
+</div>
     </div>
   </div>
 </template>
 <script>
-    return {
-        data: function() {
-            return {}
-        },
-        on: {
-            // each object key means same name event handler
-            pageInit: function(page) {
-                userReadExamPageInit(page)
-                // do something on page init
+  return {
+    data: function() {
+      return {}
+    },
+    on: {
+      // each object key means same name event handler
+      pageInit: function(page) {
+        userReadExamPageInit(page)
+        // do something on page init
 
-              //  debugger;
-            },
-            popupOpen: function(popup) {
-                // do something on popup open
-            },
-        },
-    }
+        //  debugger;
+      },
+      popupOpen: function(popup) {
+        // do something on popup open
+      },
+    },
+  }
 </script>
