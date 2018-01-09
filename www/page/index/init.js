@@ -1,4 +1,5 @@
 function init(){
+  app.view.current.router.navigate("/comments/?id="+1)
   var page = 2;
   ajaxGetExamType(function(response) {
 
