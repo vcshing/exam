@@ -17,6 +17,7 @@ function userReadExamPageInit(page) {
         $(".questionAns").html(html);
         $(".question").html(response.result[0].question);
         $(".questionTitle").html(response.result[0].title);
-        bindansConfirm()
+        bindansConfirm(page)
+        bindStatistics(page)
     })
 }

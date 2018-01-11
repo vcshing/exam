@@ -23,9 +23,11 @@
     enable_page_level_ads: true
   });
 </script>
-</head>
+
+
 
 <body>
+
   <div id="app">
     <div class="statusbar"></div>
     <div class="panel panel-left panel-cover">
@@ -138,12 +140,16 @@
             </ui>
                 <div class="preloader infinite-scroll-preloader"></div>
           </div>
-        </div>
+
+          <!-- <iframe src="http://www.webtech.tw/info.php?tid=%E7%94%A8_CSS_z-index_%E8%A8%AD%E8%A8%88%E5%A4%9A%E5%BC%B5%E5%9C%96%E7%89%87%E9%87%8D%E7%96%8A%E7%9A%84%E6%95%88%E6%9E%9C"></iframe>
+      -->  </div>
       </div>
     </div>
   </div>
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="commonjs/library/jquery.js"></script>
+  <script type="text/javascript" src="commonjs/library/googlechartjs/Chart.js"></script>
+
   <!--  <script type="text/javascript" src="commonjs/library/jquery-ui.js"></script>
   <script type="text/javascript" src="js/moment.js"></script>-->
   <script type="text/javascript" src="commonjs/library/local_storage_manager.js"></script>
@@ -178,6 +184,12 @@
   <script type="text/javascript" src="page/comments/js/bindEvent.js"></script>
   <script type="text/javascript" src="page/comments/js/xhr.js"></script>
 
+  <script type="text/javascript" src="page/statistics/js/init.js"></script>
+  <script type="text/javascript" src="page/statistics/js/function.js"></script>
+  <script type="text/javascript" src="page/statistics/js/bindEvent.js"></script>
+  <script type="text/javascript" src="page/statistics/js/xhr.js"></script>
+
+</head>
   <script>
   $(function(){
     init()

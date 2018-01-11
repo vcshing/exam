@@ -23,14 +23,16 @@
           </div>
 
       </div>
-      <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="link">Comment</a><a href="#" class="link">Share</a></div>
+      <div class="card-footer"><a href="#" class="link">Like</a><a href="#" class="statistics">統計</a></div>
 </div>
-    
+
   <div class="block">
     <div class="row">
       <button class="col button button-outline ansConfirm">確定</button>
     </div>
   </div>
+   <iframe class="fbcomment" frameborder="0" height="300" ></iframe>
+
     </div>
   </div>
 </template>
@@ -42,6 +44,9 @@
     on: {
       // each object key means same name event handler
       pageInit: function(page) {
+        $(".fbcomment").attr("width",$(window).width() )
+          $(".fbcomment").attr("src",'http://gogogo.synology.me/test/?width='+ (parseInt($(window).width())-100))
+
         userReadExamPageInit(page)
         // do something on page init
 

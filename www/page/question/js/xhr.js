@@ -20,3 +20,26 @@ function ajaxGetQuestionDetail(array,callback) {
       }
   });
 }
+
+function ajaxSubmitResult(array,callback) {
+  if (typeof(callback) != "function") {
+      callback = function(response) {};
+  }
+
+  $.ajax({
+      type: "post",
+      url: "http://gogogo.synology.me/api/psychologicaltest/submitresult.php",
+      data: {
+          "deviceid": getDeviceID(),
+          "questionid": array.questionid,
+          "answerIndex": array.answerIndex
+      },
+      dataType: "json",
+      success: function(response) {
+        callback(response);
+      },
+      error: function(response) {
+        callback(response);
+      }
+  });
+}

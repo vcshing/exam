@@ -22,6 +22,11 @@ var routes = [
     componentUrl: './page/comments/comments.html',
     name: 'comments',
   },
+  {
+    path: '/statistics/',
+    componentUrl: './page/statistics/statistics.html',
+    name: 'statistics',
+  },
   // Right Panel pages
   {
     path: '/panel-right-1/',
