@@ -32,6 +32,6 @@ function init() {
         $(".picker-type").find("select").html(html)
 
         $(".picker-type").find(".item-after").html("全部")
-      },200)
+      },1000)
     })
 }
