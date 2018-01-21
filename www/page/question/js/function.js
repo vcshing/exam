@@ -27,7 +27,7 @@ function drawChart(chartArr) {
             position: "bottom"
         },
         chartArea: {
-          left:"-50"
+          width:"200%"
         },
         pieStartAngle: 100
     };
