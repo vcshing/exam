@@ -21,17 +21,17 @@ function init() {
             $$('.infinite-scroll-preloader').remove();
         }
     })
+    setTimeout(function(){
+      ajaxGetExamType(function(response) {
+          var html = "<option value=\"" + "" + "\">" + "全部" + "<\/option>";
+          $(response.result).each(function(index, result) {
+              html += "<option value=\"" + result.type_id + "\">" + result.type + "<\/option>";
+          })
 
-    ajaxGetExamType(function(response) {
-      setTimeout(function(){
-        var html = "<option value=\"" + "" + "\">" + "全部" + "<\/option>";
-        $(response.result).each(function(index, result) {
-            html += "<option value=\"" + result.type_id + "\">" + result.type + "<\/option>";
-        })
+          $(".picker-type").find("select").html(html)
 
-        $(".picker-type").find("select").html(html)
+          $(".picker-type").find(".item-after").html("全部")
+      })
+    },3000)
 
-        $(".picker-type").find(".item-after").html("全部")
-      },3000)
-    })
 }

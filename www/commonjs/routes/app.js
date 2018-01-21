@@ -13,8 +13,6 @@ var app = new Framework7({
     root: '#app',
     theme: theme,
     view: {
-        iosDynamicNavbar: false,
-        xhrCache: false,
     },
     data: function() {
         return {
@@ -49,13 +47,13 @@ var app = new Framework7({
         },
     },
 });
-app.statusbar.hide()
+
 
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
 
     window.open = cordova.InAppBrowser.open;
-
+    app.statusbar.hide()
 
     // Set AdMobAds options:
     if (/(android)/i.test(navigator.userAgent)) { // for android & amazon-fireos
