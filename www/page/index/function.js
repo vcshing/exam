@@ -1,6 +1,6 @@
 function renderTopicList(array){
   var html="";
-//  html += "      <ul>";
+  //html += "      <ul>";
   html += "                <li>";
   html += "                   <a class=\"item-link item-content\" onclick=\"redirectQuestionPage("+ array.master_id +")\">";
   html += "                    <div class=\"item-inner\">";
@@ -14,7 +14,7 @@ function renderTopicList(array){
   html += "                  <\/a>";
   html += "                <\/li>";
   html += "";
-//  html += "              <\/ul>";
+  //html += "              <\/ul>";
 
 
   return html;
