@@ -45,7 +45,6 @@
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />
     </feature>
-    <preference name="DisallowOverscroll" value="false" />
     <preference name="fullscreen" value="false" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="android-build-tool" value="gradle" />

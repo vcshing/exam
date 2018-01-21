@@ -49,7 +49,7 @@ var app = new Framework7({
         },
     },
 });
-
+app.statusbar.hide()
 
 $$(document).on('deviceready', function() {
     console.log("Device is ready!");
