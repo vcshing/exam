@@ -1,4 +1,4 @@
-function userSubmitExamPageAddBindEvent(){
+function edit_userSubmitExamPageAddBindEvent(page){
   $$('.submitForm').on('click', function(){
     var formData = app.form.convertToData('#my-form');
 
@@ -32,9 +32,10 @@ function userSubmitExamPageAddBindEvent(){
     if(alertMsg!=""){
       app.dialog.alert(alertMsg,"資料缺失");
     }else{
-      ajaxSubmitQuestion(formData,function(response){
+      formData.id = page.detail.route.query.id;
+      edit_ajaxSubmitQuestion(formData,function(response){
           app.dialog.alert("測驗已經刊登","謝謝");
-          app.view.current.router.navigate("/?refresh=1")
+            app.view.current.router.navigate("/?refresh=1")
       })
     }
 
@@ -64,7 +65,7 @@ function userSubmitExamPageAddBindEvent(){
     }
     var html ="";
     for(var i = 0; i < $(".choiceNum").val(); i++) {
-      html += renderChoice({
+      html += edit_renderChoice({
         "choiceAns":choiceAnsArr[i] == undefined ? "" : choiceAnsArr[i],
         "choiceResult":choiceResultArr[i] == undefined ? "" : choiceResultArr[i],
         "alphabet" : digital2Alphabet(i)

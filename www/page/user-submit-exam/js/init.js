@@ -12,5 +12,16 @@ function userSubmitExamPageInit(){
 
 
   })
+  $("[name='question']").trumbowyg({
+    btns: [
+        ['viewHTML'],
+        ['strong', 'em', 'del'],
+        ['link'],
+        ['insertImage'],
+        ['removeformat']
+    ]
+  });
+
+
   userSubmitExamPageAddBindEvent()
 }

@@ -33,8 +33,13 @@ var app = new Framework7({
     on: {
         // each object key means same name event handler
         pageInit: function(page) {
+
             // do something on page init
             if(page.route.name == "home"){
+              if(page.route.query.refresh==1){
+              //  alert(1);
+                init()
+              }
               lang = getCookie("lang", "selectedLang", "zh-TW");
             }
 

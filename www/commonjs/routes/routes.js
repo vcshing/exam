@@ -27,6 +27,23 @@ var routes = [
     componentUrl: './page/statistics/statistics.html',
     name: 'statistics',
   },
+  {
+    path: '/user-selfsubmit-list/',
+    componentUrl: './page/user-selfsubmit-list/user-selfsubmit-list.html',
+    name: 'user-selfsubmit-list',
+  },
+  {
+    path: '/user-submit-edit/',
+    componentUrl: './page/user-submit-edit/user-submit-edit.html',
+    name: 'user-submit-edit',
+  },
+  {
+    path: '/disclaimer/',
+    componentUrl: './page/disclaimer/disclaimer.html',
+    name: 'disclaimer',
+  },
+
+
   // Right Panel pages
   {
     path: '/panel-right-1/',

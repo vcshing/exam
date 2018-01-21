@@ -1,4 +1,4 @@
-function renderChoice(array) {
+function edit_renderChoice(array) {
     var html="";
     html += "    <li >";
     html += "      <div class=\"item-content item-input\">";

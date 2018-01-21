@@ -43,3 +43,24 @@ function ajaxSubmitResult(array,callback) {
       }
   });
 }
+
+function ajaxGetStatisticsDetail(array,callback) {
+  if (typeof(callback) != "function") {
+      callback = function(response) {};
+  }
+
+  $.ajax({
+      type: "post",
+      url: "http://gogogo.synology.me/api/psychologicaltest/getstatisticsdata.php",
+      data: {
+          "id": array.id
+      },
+      dataType: "json",
+      success: function(response) {
+        callback(response);
+      },
+      error: function(response) {
+        callback(response);
+      }
+  });
+}

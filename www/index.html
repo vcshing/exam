@@ -15,14 +15,8 @@
   <link rel="stylesheet" href="css/csshake.min.css">
   <link rel="apple-touch-icon" href="img/f7-icon-square.png">
   <link rel="icon" href="img/f7-icon.png">
+  <link rel="stylesheet" href="commonjs/library/editor/trumbowyg.css">
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3715336230214756",
-    enable_page_level_ads: true
-  });
-</script>
 
 
 
@@ -39,10 +33,16 @@
           <div class="list links-list">
             <ul>
               <li>
-                <a href="/" class="panel-close">主頁</a>
+                <a href="/home" class="panel-close">主頁</a>
               </li>
               <li>
                 <a href="/user-submit-exam/" class="panel-close">提交心理測驗題目</a>
+              </li>
+              <li>
+                <a href="/user-selfsubmit-list/" class="panel-close"  >我的心理測驗題目</a>
+              </li>
+              <li>
+                <a href="/disclaimer/" class="panel-close"  >聲明</a>
               </li>
               <li>
                 <a href="#" class="panel-close otherApp">其他應用</a>
@@ -90,7 +90,7 @@
                 <i class="icon material-icons md-only">menu</i>
               </a>
             </div>
-            <div class="title sliding">Framework7</div>
+            <div class="title sliding">心理測驗</div>
             <div class="right">
               <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
                 <i class="icon f7-icons ios-only">search_strong</i>
@@ -149,6 +149,9 @@
   <script type="text/javascript" src="cordova.js"></script>
   <script type="text/javascript" src="commonjs/library/jquery.js"></script>
   <script type="text/javascript" src="commonjs/library/googlechartjs/Chart.js"></script>
+  <script type="text/javascript" src="commonjs/library/editor/trumbowyg.js"></script>
+  <script type="text/javascript" src="commonjs/library/editor/trumbowyg.allowtagsfrompaste.js"></script>
+
 
   <!--  <script type="text/javascript" src="commonjs/library/jquery-ui.js"></script>
   <script type="text/javascript" src="js/moment.js"></script>-->
@@ -159,9 +162,6 @@
 
   <script type="text/javascript" src="commonjs/global/projectCommonFunction.js"></script>
   <script type="text/javascript" src="commonjs/global/projectCommonBindEvent.js"></script>
-  <script type="text/javascript" src="commonjs/global/commonFunction.js"></script>
-  <script type="text/javascript" src="commonjs/global/commonBindEvent.js"></script>
-  <script type="text/javascript" src="commonjs/global/commonXhr.js"></script>
   <script type="text/javascript" src="commonjs/routes/app.js"></script>
 
   <script type="text/javascript" src="page/index/init.js"></script>
@@ -188,6 +188,17 @@
   <script type="text/javascript" src="page/statistics/js/function.js"></script>
   <script type="text/javascript" src="page/statistics/js/bindEvent.js"></script>
   <script type="text/javascript" src="page/statistics/js/xhr.js"></script>
+
+  <script type="text/javascript" src="page/user-selfsubmit-list/js/init.js"></script>
+  <script type="text/javascript" src="page/user-selfsubmit-list/js/function.js"></script>
+  <script type="text/javascript" src="page/user-selfsubmit-list/js/bindEvent.js"></script>
+  <script type="text/javascript" src="page/user-selfsubmit-list/js/xhr.js"></script>
+
+  <script type="text/javascript" src="page/user-submit-edit/js/init.js"></script>
+  <script type="text/javascript" src="page/user-submit-edit/js/function.js"></script>
+  <script type="text/javascript" src="page/user-submit-edit/js/bindEvent.js"></script>
+  <script type="text/javascript" src="page/user-submit-edit/js/xhr.js"></script>
+
 
 </head>
   <script>

@@ -383,3 +383,11 @@ function digital2Alphabet(digital, toUpperCase){
     return alphabet[digital].toUpperCase();
   }
 }
+
+function htmlDecode(value) {
+    return $("<div/>").html(value).text();
+}
+
+function htmlEncode(value) {
+    return $('<div/>').text(value).html();
+}

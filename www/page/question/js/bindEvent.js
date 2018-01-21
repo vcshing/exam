@@ -1,9 +1,12 @@
 function bindansConfirm(page){
   $(".ansConfirm").bind("click",function(e){
   //  debugger;
-    var ans= $(".questionAns input:radio:checked").parent().find(".result").html();
-    ans = ans.trim()
-    app.dialog.alert(ans,"分析");
+    var result= $(".questionAns input:radio:checked").parent().find(".result").html();
+    var ans= $(".questionAns input:radio:checked").parent().find(".answer").html();
+    result = result.trim()
+  //  app.dialog.alert(ans,"分析");
+    $(".selectAnswer").html(htmlDecode(result))
+    $(".selectAnswerTitle").html(htmlDecode(ans))
 
     ajaxSubmitResult({
       "questionid": page.detail.route.query.id,
@@ -17,8 +20,6 @@ function bindansConfirm(page){
 
 function bindStatistics(page){
 
-  $(".statistics").bind("click",function(){
+    //    app.view.current.router.navigate("/statistics/?id="+ page.detail.route.query.id,{reloadCurrent: false})
 
-        app.view.current.router.navigate("/statistics/?id="+ page.detail.route.query.id)
-  })
 }
