@@ -20,18 +20,18 @@ function init() {
             app.infiniteScroll.destroy('.infinite-scroll-content');
             $$('.infinite-scroll-preloader').remove();
         }
-
-        ajaxGetExamType(function(response) {
-
-            var html = "<option value=\"" + "" + "\">" + "全部" + "<\/option>";
-            $(response.result).each(function(index, result) {
-                html += "<option value=\"" + result.type_id + "\">" + result.type + "<\/option>";
-            })
-
-            $(".picker-type").find("select").html(html)
-
-            $(".picker-type").find(".item-after").html("全部")
-        })
     })
 
+    ajaxGetExamType(function(response) {
+      setTimeout(function(){
+        var html = "<option value=\"" + "" + "\">" + "全部" + "<\/option>";
+        $(response.result).each(function(index, result) {
+            html += "<option value=\"" + result.type_id + "\">" + result.type + "<\/option>";
+        })
+
+        $(".picker-type").find("select").html(html)
+
+        $(".picker-type").find(".item-after").html("全部")
+      },200)
+    })
 }
