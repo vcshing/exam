@@ -1,46 +1,36 @@
 function init() {
     $.trumbowyg.svgPath = 'commonjs/library/editor/icons.svg';
 
-
     //alert(1);
     //app.view.current.router.navigate("/comments/?id="+1)
     var page = 2;
-    ajaxGetExamType(function(response) {
-
-        var html = "<option value=\"" + "" + "\">" + "全部" + "<\/option>";
+    ajaxGetTopicList({
+        "page": 1,
+        "type": $(".type").val(),
+        "id": ""
+    }, function(response) {
+        var html = ""
+        //  debugger;
         $(response.result).each(function(index, result) {
-            html += "<option value=\"" + result.type_id + "\">" + result.type + "<\/option>";
+            html += renderTopicList(result)
         })
+        page = 2;
+        $(".topicList").append(html);
+        if (response.hasNextPage == 0) {
+            app.infiniteScroll.destroy('.infinite-scroll-content');
+            $$('.infinite-scroll-preloader').remove();
+        }
 
-        $(".picker-type").find("select").html(html)
-        //  $("item-after")
-        $(".picker-type").find(".item-after").html("全部")
-        /*    var pickerDevice = myApp.picker({
-              input: '#picker-device',
-              cols: [{
-                textAlign: 'center',
-                values: response.result
-              }]
-            });
-            */
+        ajaxGetExamType(function(response) {
 
-
-        ajaxGetTopicList({
-            "page": 1,
-            "type": $(".type").val(),
-            "id": ""
-        }, function(response) {
-            var html = ""
-            //  debugger;
+            var html = "<option value=\"" + "" + "\">" + "全部" + "<\/option>";
             $(response.result).each(function(index, result) {
-                html += renderTopicList(result)
+                html += "<option value=\"" + result.type_id + "\">" + result.type + "<\/option>";
             })
-            page = 2;
-            $(".topicList").append(html);
-            if (response.hasNextPage == 0) {
-                app.infiniteScroll.destroy('.infinite-scroll-content');
-                $$('.infinite-scroll-preloader').remove();
-            }
+
+            $(".picker-type").find("select").html(html)
+
+            $(".picker-type").find(".item-after").html("全部")
         })
     })
 
