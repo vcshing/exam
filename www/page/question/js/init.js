@@ -24,7 +24,7 @@ function userReadExamPageInit(page) {
 
         $(".question").find("img").attr("width","100%")
         bindansConfirm(page)
-        //bindStatistics(page)
+        bindStatistics(page)
     })
 
 }

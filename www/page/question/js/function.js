@@ -24,7 +24,7 @@ function genStatistics(page){
   ajaxGetStatisticsDetail({
       "id": page.detail.route.query.id
   }, function(response) {
-  //debugger;
+//debugger;
       $(response.result).each(function(index, result) {
         chartArr["result"]["content"].push(
           {
@@ -33,6 +33,15 @@ function genStatistics(page){
     			}
         )
       })
+      //debugger;
+      if(chartArr["result"]["content"][0].label == null){
+        chartArr["result"]["content"].push(
+          {
+            "label": "No Result",
+            "value":  1
+          }
+        )
+      }
       chartArr["title"] = response.result[0].title
       chartArr["question"] = response.result[0].question
       drawChart(chartArr);
@@ -41,7 +50,9 @@ function genStatistics(page){
 }
 
 function drawChart(chartArr){
-  $(".chartQuestion").html(chartArr["question"]);
+  ///$(".chartQuestion").html(chartArr["question"]);
+//  .find("img").attr("width","100%")
+//  $(".chartQuestion").find("img").css('display', 'none');
   $("#piechart").html("");
   var pie = new d3pie("piechart", {
   	"header": {
@@ -60,7 +71,7 @@ function drawChart(chartArr){
   		"location": "bottom-left"
   	},
   	"size": {
-  		"canvasWidth": $(window).width() ,
+  		"canvasWidth": $(".popup").width() ,
       "canvasHeight":'300' ,
   		"pieOuterRadius": "50%"
   	},
