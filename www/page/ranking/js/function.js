@@ -36,7 +36,7 @@ function addBindChnageNameAfterRender(){
           if (value != "") {
               changeUserName(value, function(e) {
                     setCookie("username", value)
-                    myApp.alert("改左名啦",function(){
+                    app.dialog.alert("改左名啦",function(){
                     mainView.router.refreshPage();
                   });
               })
@@ -62,7 +62,7 @@ function addBindChnageNameAfterRender(){
               callback(response)
           },
           error: function(response) {
-              myApp.alert("Fail")
+              app.dialog.alert("Fail")
           }
       });
   }

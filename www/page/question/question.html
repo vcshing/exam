@@ -31,11 +31,11 @@
       </div>
       <div class="card-footer">
     <!--    <a href="#" >Like</a>-->
-    <button data-popup=".result-popup" href="#" class="button button-small button-fill color-blue popup-open ansConfirm">確定</button>
+    <button data-popup=".result-popup" href="#" class="button  button-fill color-blue ansConfirm">確定</button>
 
 </div>
       <div class="card-footer">
-        <button href="#" class="button button-fill color-gray button-small statistics popup-open" data-popup=".demo-popup">統計</button>
+        <button href="#" class="button button-fill color-gray statistics popup-open" data-popup=".demo-popup" data-ignore-cache="false">統計</button>
 
       </div>
 </div>
@@ -54,10 +54,11 @@
           </div>
         </div>
         <div class="page-content">
-
+          <div class="block chartTitle"></div>
+            <div class="block chartQuestion"></div>
               <div id="piechart" ></div>
 
-            <div class="block"><button href="#" class="button-fill color-pink link popup-close button">關閉</button>  </div>
+            <div class="block"><button href="#" class="button-fill color-pink link popup-close button" >關閉</button>  </div>
         </div>
       </div>
     </div>
@@ -71,7 +72,7 @@
         </div>
         <div class="page-content">
           <div class="block selectAnswer">你沒有選擇答案哦!</div>
-
+            <div class="block"><button href="#" class="button-fill color-gray link popup-open button statistics" data-popup=".demo-popup" data-ignore-cache="false">統計</button>  </div>
             <div class="block"><button href="#" class="button-fill color-pink link popup-close button">關閉</button>  </div>
         </div>
       </div>

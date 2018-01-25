@@ -170,9 +170,9 @@ myApp.onPageInit('quotelist', function(page) {
                                                 self.html("Published");
                                                 if (typeof(window.plugins) != "undefined") {
                                                   //  window.plugins.toast.showLongBottom('Published', function(a) {}, function(b) {})
-                                                    myApp.alert("Published");
+                                                    app.dialog.alert("Published");
                                                 } else {
-                                                    myApp.alert("Published");
+                                                    app.dialog.alert("Published");
                                                 }
                                             }
                                         }
@@ -182,7 +182,7 @@ myApp.onPageInit('quotelist', function(page) {
                                 {
                                   text: 'Cancel',
                                   onClick: function() {
-                                  //  myApp.alert('You clicked second button!')
+                                  //  app.dialog.alert('You clicked second button!')
                                   }
                                 }
                               ]
@@ -192,7 +192,7 @@ myApp.onPageInit('quotelist', function(page) {
                             if (typeof(window.plugins) != "undefined") {
                                 window.plugins.toast.showLongBottom('You already published', function(a) {}, function(b) {})
                             } else {
-                                myApp.alert("You already published");
+                                app.dialog.alert("You already published");
                             }
                         }
                     });
@@ -214,10 +214,10 @@ myApp.onPageInit('quotelist', function(page) {
                                 if (response.status == 1) {
                                     self.find("span").html("Deleted");
                                     if (typeof(window.plugins) != "undefined") {
-                                        myApp.alert("Deleted");
+                                        app.dialog.alert("Deleted");
                                         self.parent().parent().hide()
                                     } else {
-                                        myApp.alert("Deleted");
+                                        app.dialog.alert("Deleted");
                                         self.parent().parent().hide()
                                     }
                                 }
@@ -226,11 +226,11 @@ myApp.onPageInit('quotelist', function(page) {
                     });
 
                 } else {
-                    myApp.alert("Server Error, Please Try Again Later");
+                    app.dialog.alert("Server Error, Please Try Again Later");
                 }
             },
             error: function(response) {
-                myApp.alert("Server Error, Please Try Again Later");
+                app.dialog.alert("Server Error, Please Try Again Later");
             }
         });
     }
@@ -351,11 +351,11 @@ myApp.onPageInit('quotelistPublic', function(page) {
 
 
                 } else {
-                    myApp.alert("Server Error, Please Try Again Later");
+                    app.dialog.alert("Server Error, Please Try Again Later");
                 }
             },
             error: function(response) {
-                myApp.alert("Server Error, Please Try Again Later");
+                app.dialog.alert("Server Error, Please Try Again Later");
             }
         });
     }

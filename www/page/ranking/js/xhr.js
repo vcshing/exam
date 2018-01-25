@@ -8,7 +8,7 @@ function ajaxRankingList(callback) {
             callback(response)
         },
         error: function(response) {
-            myApp.alert("Fail")
+            app.dialog.alert("Fail")
         }
     });
 }
@@ -23,7 +23,7 @@ function ajaxSelfRankingList(callback) {
             callback(response)
         },
         error: function(response) {
-            myApp.alert("Fail")
+            app.dialog.alert("Fail")
 
         }
     });

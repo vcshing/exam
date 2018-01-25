@@ -308,9 +308,9 @@ $(".dailyCheckin").bind("click", function() {
                         })
                         setCookieIndex("checkIn", "continueCheckIn", parseInt(getCookie("checkIn", "continueCheckIn", 0)) + 1)
                         afterCheckIn();
-                        myApp.alert("你一共簽到了" + getCookie("checkIn", "continueCheckIn", 1) + " 次!!恭起發財");
+                        app.dialog.alert("你一共簽到了" + getCookie("checkIn", "continueCheckIn", 1) + " 次!!恭起發財");
                     } else {
-                        myApp.alert("你今天已經簽到了!!");
+                        app.dialog.alert("你今天已經簽到了!!");
                     }
 
                 }

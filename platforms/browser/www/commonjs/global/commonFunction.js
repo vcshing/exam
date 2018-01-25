@@ -9,7 +9,7 @@ function noMoneyAlert() {
                         appArr.rewardVideoReady = false;
                         AdMob.showRewardVideoAd();
                     } else {
-                        myApp.alert("暫時沒有廣告,請稍後再來");
+                        app.dialog.alert("暫時沒有廣告,請稍後再來");
                         if (AdMob) AdMob.prepareRewardVideoAd({
                             adId: admobid.rewardVideoAd,
                             autoShow: false,
@@ -43,19 +43,19 @@ function winAlert(money) {
               alert('toast error: ' + b)
           }
       )*/
-    myApp.alert('你贏了' + money, "恭喜 >O<", function() {
+    app.dialog.alert('你贏了' + money, "恭喜 >O<", function() {
         sliceGameResult()
     });
 }
 
 function drewAlert(money) {
-    myApp.alert('打和', "Super ^_^", function() {
+    app.dialog.alert('打和', "Super ^_^", function() {
         sliceGameResult()
     });
 }
 
 function lostAlert(money) {
-    myApp.alert('你輸了' + money, "哎 >_<", function() {
+    app.dialog.alert('你輸了' + money, "哎 >_<", function() {
         sliceGameResult()
     });
 }

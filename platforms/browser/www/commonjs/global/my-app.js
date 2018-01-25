@@ -170,14 +170,14 @@ $$(document).on('pageInit', function(e) {
     //console.log(page.name);
     if (page.name === 'about') {
         // Following code will be executed for page with data-page attribute equal to "about"
-        // myApp.alert('1Here comes About page');
+        // app.dialog.alert('1Here comes About page');
     }
 })
 
 // Option 2. Using live 'pageInit' event handlers for each page
 $$(document).on('pageInit', '.page[data-page="twelveConstellationsDetail"]', function(e) {
     // Following code will be executed for page with data-page attribute equal to "about"
-    //myApp.alert('2Here comes About page');
+    //app.dialog.alert('2Here comes About page');
     //alert(123);
 
     //$(".twelveConstellationsDetailContents").html(toCode($(".twelveConstellationsDetailContents").html(),1));

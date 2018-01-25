@@ -66,10 +66,10 @@ $(".rechargeMoney").bind("click", function() {
           if(response.transactionId != undefined &&
             response.transactionId != ""){
             addMoney(80000);
-            myApp.alert("你已經成功充值!");
+            app.dialog.alert("你已經成功充值!");
             ajaxSavePaymentRecord(response,function(){})
           }else{
-            myApp.alert("Cancalled");
+            app.dialog.alert("Cancalled");
           }
         })
     })

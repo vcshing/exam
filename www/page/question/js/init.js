@@ -1,6 +1,6 @@
 function userReadExamPageInit(page) {
     addFacebookFrame(page);
-
+    bindQuestionInit(page)
     ajaxGetQuestionDetail({
         "id": page.detail.route.query.id
     }, function(response) {
@@ -26,10 +26,5 @@ function userReadExamPageInit(page) {
         bindansConfirm(page)
         //bindStatistics(page)
     })
-
-
-
-    bindStatistics(page)
-
 
 }
