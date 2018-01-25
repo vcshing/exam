@@ -17,7 +17,7 @@ function userSubmitExamListInit(){
       html += selfList_renderTopicList(result)
     })
     page = 2;
-    $(".self_topicList").append(html);
+    $(".self_topicList").html(html);
     if(response.hasNextPage == 0){
       app.infiniteScroll.destroy('.infinite-scroll-content');
       $$('.infinite-scroll-preloader').remove();
