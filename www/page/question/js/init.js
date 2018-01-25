@@ -1,5 +1,6 @@
 function userReadExamPageInit(page) {
     addFacebookFrame(page);
+    openedResultPop=false;
     bindQuestionInit(page)
     ajaxGetQuestionDetail({
         "id": page.detail.route.query.id

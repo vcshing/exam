@@ -44,39 +44,39 @@
 
     </div>
 
-
-    <div class="popup demo-popup">
-      <div class="page">
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="title ">統計</div>
-            <div class="right"><a href="#" class="link popup-close">關閉</a></div>
-          </div>
-        </div>
-        <div class="page-content">
-          <div class="block chartTitle"></div>
-            <div class="block chartQuestion"></div>
-              <div id="piechart" ></div>
-
-            <div class="block"><button href="#" class="button-fill color-pink link popup-close button" >關閉</button>  </div>
-        </div>
-      </div>
-    </div>
     <div class="popup result-popup">
       <div class="page">
         <div class="navbar">
           <div class="navbar-inner">
             <div class="title selectAnswerTitle">結果</div>
-            <div class="right"><a href="#" class="link popup-close">關閉</a></div>
+            <div class="right"><a href="#" class="link  resultPopClose">關閉</a></div>
           </div>
         </div>
         <div class="page-content">
           <div class="block selectAnswer">你沒有選擇答案哦!</div>
             <div class="block"><button href="#" class="button-fill color-gray link popup-open button statistics" data-popup=".demo-popup" data-ignore-cache="false">統計</button>  </div>
-            <div class="block"><button href="#" class="button-fill color-pink link popup-close button">關閉</button>  </div>
+            <div class="block"><button href="#" class="button-fill color-pink link  button resultPopClose">關閉</button>  </div>
         </div>
       </div>
     </div>
+    <div class="popup demo-popup">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="title ">統計</div>
+            <div class="right"><a href="#" class="link chartClose">關閉</a></div>
+          </div>
+        </div>
+        <div class="page-content chart-page-content">
+          <div class="block chartTitle"></div>
+            <div class="block chartQuestion"></div>
+              <div id="piechart" ></div>
+
+            <div class="block"><button href="#" class="button-fill color-pink link button chartClose " >關閉</button>  </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 

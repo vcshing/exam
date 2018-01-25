@@ -1,10 +1,35 @@
 function bindQuestionInit(page){
 
+  $(".resultPopClose").bind("click",function(e){
+    e.preventDefault();
+    if(openedResultPop){
+      app.popup.close()
+      openedResultPop = false
+    }
+  })
+
+  $(".chartClose").bind("click",function(e){
+    e.preventDefault();
+    if(openedResultPop){
+      app.popup.close()
+      app.popup.close()
+      app.popup.open(statisticsPop)
+    } else{
+      app.popup.close()
+    }
+    //app.popup.close()
+    //app.popup.close()
+    //app.popup.open(statisticsPop)
+    //$(".demo-popup").hide();
+  })
 }
 
 function bindansConfirm(page){
   $(".ansConfirm").bind("click",function(e){
     if($(this).hasClass("popup-open")){
+      openedResultPop=true;
+      resultPop =app.popup.get().$el;
+
       var result= $(".questionAns input:radio:checked").parent().find(".result").html();
       var ans= $(".questionAns input:radio:checked").parent().find(".answer").html();
       result = result.trim()
@@ -31,6 +56,7 @@ function bindansConfirm(page){
 
 function bindStatistics(page){
   $(".statistics").bind("click",function(e){
+    statisticsPop =app.popup.get().$el;
     genStatistics(page)
   })
 }
