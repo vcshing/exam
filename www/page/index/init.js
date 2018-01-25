@@ -15,7 +15,7 @@ function init() {
             html += renderTopicList(result)
         })
         page = 2;
-        $(".topicList").append(html);
+        $(".topicList").html(html);
         if (response.hasNextPage == 0) {
             app.infiniteScroll.destroy('.infinite-scroll-content');
             $$('.infinite-scroll-preloader').remove();
