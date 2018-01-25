@@ -1,7 +1,6 @@
 function userSubmitExamListInit(){
   $.trumbowyg.svgPath = 'commonjs/library/editor/icons.svg';
 
-
   //alert(1);
   //app.view.current.router.navigate("/comments/?id="+1)
   var page = 2;
@@ -26,8 +25,11 @@ function userSubmitExamListInit(){
   var $ptrContent = $$('.ptr-content');
   //debugger;
   $ptrContent.on('ptr:refresh', function (e) {
-    init();
-    app.ptr.done();
+    setTimeout(function () {
+
+      userSubmitExamListInit();
+      e.detail();
+    },200)
   })
 
 }
