@@ -23,6 +23,11 @@ function userSubmitExamListInit(){
       $$('.infinite-scroll-preloader').remove();
     }
   })
-
+  var $ptrContent = $$('.ptr-content');
+  //debugger;
+  $ptrContent.on('ptr:refresh', function (e) {
+    init();
+    app.ptr.done();
+  })
 
 }
