@@ -31,7 +31,10 @@ function init() {
           $(".picker-type").find("select").html(html)
 
           $(".picker-type").find(".item-after").html("全部")
+
+          bindType();
       })
+
     },3000)
     var $ptrContent = $$('.ptr-content');
     //debugger;
