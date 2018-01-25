@@ -30,7 +30,10 @@ function userSubmitExamEditPageInit(page){
       $("[name='question']").trumbowyg({
         btns: [
             ['viewHTML'],
+            ['undo', 'redo'], // Only supported in Blink browsers
+            ['formatting'],
             ['strong', 'em', 'del'],
+            ['foreColor', 'backColor'],
             ['link'],
             ['insertImage'],
             ['removeformat']
@@ -52,7 +55,10 @@ function userSubmitExamEditPageInit(page){
       $(".choiceResult").trumbowyg({
         btns: [
             ['viewHTML'],
+            ['undo', 'redo'], // Only supported in Blink browsers
+            ['formatting'],
             ['strong', 'em', 'del'],
+            ['foreColor', 'backColor'],
             ['link'],
             ['insertImage'],
             ['removeformat']

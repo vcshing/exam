@@ -33,5 +33,10 @@ function init() {
           $(".picker-type").find(".item-after").html("全部")
       })
     },3000)
-
+    var $ptrContent = $$('.ptr-content');
+    //debugger;
+    $ptrContent.on('ptr:refresh', function (e) {
+      init();
+      app.ptr.done();
+    })
 }
