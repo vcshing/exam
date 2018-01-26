@@ -40,6 +40,6 @@ function init() {
     //debugger;
     $ptrContent.on('ptr:refresh', function (e) {
       init();
-      app.ptr.done();
+      e.detail();
     })
 }
