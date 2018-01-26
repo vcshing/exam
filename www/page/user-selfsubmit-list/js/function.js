@@ -22,4 +22,5 @@ function selfList_renderTopicList(array){
 
 function selfList_redirectQuestionPage(index){
     app.view.current.router.navigate("/user-submit-edit/?id="+ index)
+
 }
