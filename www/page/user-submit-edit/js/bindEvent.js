@@ -9,7 +9,7 @@ function edit_userSubmitExamPageAddBindEvent(page){
     if(formData.subject == ""){
         alertMsg += '- 請輸入題目 <br/>'
     }
-    if(formData.subject == ""){
+    if(formData.question == ""){
         alertMsg += '- 請輸入問題 <br/>'
     }
     if(formData.choiceNum == "0"){
@@ -38,8 +38,19 @@ function edit_userSubmitExamPageAddBindEvent(page){
             app.view.current.router.navigate("/?refresh=1")
       })
     }
+  });
 
 
+  $$('.deleteBtn').on('click', function(){
+    app.dialog.confirm('永久刪除題目?', function () {
+      edit_ajaxSubmitQuestion({
+        "id" : page.detail.route.query.id,
+        "markeddel" : 1
+      },function(response){
+          app.dialog.alert("測驗已經刪除","謝謝");
+            app.view.current.router.navigate("/?refresh=1")
+      })
+    });
   });
 
   $$('.fill-form-from-data').on('click', function(){

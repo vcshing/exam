@@ -38,6 +38,7 @@ function edit_ajaxSubmitQuestion(array,callback) {
             "choiceNum": array.choiceNum,
             "answer": array.answer,
             "result": array.result,
+            "markeddel": array.markeddel,
             "lang": lang
         },
         dataType: "json",
@@ -50,6 +51,7 @@ function edit_ajaxSubmitQuestion(array,callback) {
         }
     });
 }
+
 
 function edit_ajaxGetExamType(callback) {
     if (typeof(callback) != "function") {
