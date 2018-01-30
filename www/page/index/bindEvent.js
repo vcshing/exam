@@ -3,6 +3,7 @@
 //    mainView.router.loadPage("page/question/question.html")
 //  })
 //}
+
 function bindType() {
     $(".type").bind("change", function() {
         ajaxGetTopicList({
@@ -15,38 +16,46 @@ function bindType() {
                 html += renderTopicList(result)
             })
             $(".topicList").html(html);
-            page = 2;
+            page = 1;
+
             if (response.hasNextPage == 0) {
                 app.infiniteScroll.destroy('.infinite-scroll-content');
-                $$('.infinite-scroll-preloader').remove();
+                $$('.infinite-scroll-preloader').hide();
+            }else{
+              app.infiniteScroll.create('.infinite-scroll-content');
+              $$('.infinite-scroll-preloader').show();
             }
         })
 
     })
 }
+
 var allowInfinite = true;
 
 $$('.infinite-scroll-content').on('infinite', function() {
+
     if (!allowInfinite) return;
     allowInfinite = false;
-    page++
-    ajaxGetTopicList(topicListArr = {
-        "page": page,
-        "type": $(".type").val(),
-        "id": ""
-    }, function(response) {
-        var html = ""
-        //  debugger;
-        $(response.result).each(function(index, result) {
-            html += renderTopicList(result)
+    setTimeout(function() {
+        page++
+        ajaxGetTopicList(topicListArr = {
+            "page": page,
+            "type": $(".type").val(),
+            "id": ""
+        }, function(response) {
+
+            var html = ""
+            //  debugger;
+            $(response.result).each(function(index, result) {
+                html += renderTopicList(result)
+            })
+            $(".topicList").append(html);
+
+            if (response.hasNextPage == 0) {
+                app.infiniteScroll.destroy('.infinite-scroll-content');
+                $$('.infinite-scroll-preloader').hide();
+            }
+            allowInfinite = true;
         })
-        $(".topicList").append(html);
-
-        if (response.hasNextPage == 0) {
-            app.infiniteScroll.destroy('.infinite-scroll-content');
-            $$('.infinite-scroll-preloader').remove();
-        }
-        allowInfinite = true;
-    })
-
+    }, 100);
 })

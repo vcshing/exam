@@ -37,6 +37,7 @@ function edit_ajaxSubmitQuestion(array,callback) {
             "question": array.question,
             "choiceNum": array.choiceNum,
             "answer": array.answer,
+            "markeddel": array.markeddel,
             "result": array.result,
             "markeddel": array.markeddel,
             "lang": lang
