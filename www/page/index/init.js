@@ -3,6 +3,7 @@ function init() {
 
     //alert(1);
     //app.view.current.router.navigate("/comments/?id="+1)
+    bindInfinite()
     page = 1;
     ajaxGetTopicList({
         "page": 1,
@@ -21,7 +22,7 @@ function init() {
             $$('.infinite-scroll-preloader').hide();
         }
     })
-    setTimeout(function(){
+
       ajaxGetExamType(function(response) {
           var html = "<option value=\"" + "" + "\">" + "全部" + "<\/option>";
           $(response.result).each(function(index, result) {
@@ -35,7 +36,7 @@ function init() {
           bindType();
       })
 
-    },3000)
+
     var $ptrContent = $$('.ptr-content');
     //debugger;
     $ptrContent.on('ptr:refresh', function (e) {

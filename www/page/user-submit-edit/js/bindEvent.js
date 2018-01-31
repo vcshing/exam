@@ -64,7 +64,7 @@ function edit_userSubmitExamPageAddBindEvent(page){
       })
     });
   });
-  
+
   $$('.fill-form-from-data').on('click', function(){
     var formData = {
     }

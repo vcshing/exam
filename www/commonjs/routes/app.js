@@ -34,7 +34,9 @@ var app = new Framework7({
     on: {
         // each object key means same name event handler
         pageInit: function(page) {
-
+            if (page.route.query.reload == 1) {
+                location.reload();
+            }
             // do something on page init
             if(page.route.name == "home"){
               if(page.route.query.refresh==1){

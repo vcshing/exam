@@ -29,7 +29,7 @@ function bindType() {
 
     })
 }
-
+function bindInfinite() {
 var allowInfinite = true;
 
 $$('.infinite-scroll-content').on('infinite', function() {
@@ -59,3 +59,4 @@ $$('.infinite-scroll-content').on('infinite', function() {
         })
     }, 100);
 })
+}
